@@ -1,0 +1,35 @@
+[project]
+name = "cookagent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alibabacloud-oss-v2>=1.4.0",
+    "colorama>=0.4.6",
+    "fastapi>=0.142.2",
+    "langchain>=1.4.3",
+    "langchain-community>=0.4.2",
+    "langchain-core>=1.6.6",
+    "langchain-openai>=1.6.7",
+    "langchain-tavily>=0.2.18",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "langgraph-cli[inmem]>=0.4.32",
+    "pillow>=12.3.0",
+    "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.32",
+    "streamlit>=1.64.0",
+    "tavily-python>=0.8.4",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+cookagent = "cookagent:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
